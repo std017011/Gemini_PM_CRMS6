@@ -12,7 +12,7 @@ const lineConfig = {
 const client = new line.Client(lineConfig);
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const model = genAI.getGenerativeModel({ model: 'gemma-3-27b' });
+const model = genAI.getGenerativeModel({ model: 'gemma-3-27b-it' });
 
 app.post('/webhook', line.middleware(lineConfig), async (req, res) => {
   try {
